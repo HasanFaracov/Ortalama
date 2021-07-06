@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="ilk">
+            <h1>Ortalama balin hesablanmasi:</h1>
+            <button class="btn" onclick="semacil()">Semestr uzre</button>
+            <button class="btn" onclick="umumacil()">Umumi</button>
+
+        </div>
+        <div class="semestr">
+
+            <div class="yuxari">
+                <div class="geri" onclick="geri()">
+                    <div class="ox"></div>
+                    GERI</div>
+                <h1>Smestr uzre ortalama</h1>
+                <table class="yuxaritable">
+                    <tr>
+                        <td colspan="2" id="secim1"><label for="fensayi">Fenn sayi:</label></td>
+                        <td colspan="2" id="secim2">
+                            <select id="fensayi" name="fensayi" onchange="deyis()">
+                                <option value="3" selected >3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"> &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><label for="bal-1">Bal:</label></td>
+                        <td><input type="text" id="bal-1" name="bal-1" class="giris" maxlength="3"></td>
+                        <td><label for="kredit-1">Kredit:</label></td>
+                        <td><input type="text" id="kredit-1" name="kredit-1" class="giris" maxlength="1"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="bal-2">Bal:</label></td>
+                        <td><input type="text" id="bal-2" name="bal-2" class="giris" maxlength="3"></td>
+                        <td><label for="kredit-2">Kredit:</label></td>
+                        <td><input type="text" id="kredit-2" name="kredit-2" class="giris" maxlength="1"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="bal-3">Bal:</label></td>
+                        <td><input type="text" id="bal-3" name="bal-3" class="giris" maxlength="3"></td>
+                        <td><label for="kredit-3">Kredit:</label></td>
+                        <td><input type="text" id="kredit-3" name="kredit-3" class="giris" maxlength="1"></td>
+                    </tr>
+                    <tr id="fen4">
+                        <td><label for="bal-4">Bal:</label></td>
+                        <td><input type="text" id="bal-4" name="bal-4" class="giris" maxlength="3"></td>
+                        <td><label for="kredit-4">Kredit:</label></td>
+                        <td><input type="text" id="kredit-4" name="kredit-4" class="giris" maxlength="1"></td>
+                    </tr>
+                    <tr id="fen5">
+                        <td><label for="bal-5">Bal:</label></td>
+                        <td><input type="text" id="bal-5" name="bal-5" class="giris" maxlength="3"></td>
+                        <td><label for="kredit-5">Kredit:</label></td>
+                        <td><input type="text" id="kredit-5" name="kredit-5" class="giris" maxlength="1"></td>
+                    </tr>
+                    <tr id="fen6">
+                        <td><label for="bal-6">Bal:</label></td>
+                        <td><input type="text" id="bal-6" name="bal-6" class="giris" maxlength="3"></td>
+                        <td><label for="kredit-6">Kredit:</label></td>
+                        <td><input type="text" id="kredit-6" name="kredit-6" class="giris" maxlength="1"></td>
+                    </tr>
+                    <tr id="fen7">
+                        <td><label for="bal-7">Bal:</label></td>
+                        <td><input type="text" id="bal-7" name="bal-7" class="giris" maxlength="3"></td>
+                        <td><label for="kredit-7">Kredit:</label></td>
+                        <td><input type="text" id="kredit-7" name="kredit-7" class="giris" maxlength="1"></td>
+                    </tr>
+                    <tr id="fen8">
+                        <td><label for="bal-8">Bal:</label></td>
+                        <td><input type="text" id="bal-8" name="bal-8" class="giris" maxlength="3"></td>
+                        <td><label for="kredit-8">Kredit:</label></td>
+                        <td><input type="text" id="kredit-8" name="kredit-8" class="giris" maxlength="1"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"> &nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2"> <label for="cavab">
+                            GPA: &nbsp; <input id="cavab" name="cavab"  class="cavab" disabled  > </td>
+                        <td colspan="2" > <input type="button" value="Hesabla"  class="btn-hesab" onclick="hesabla()" ></td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+        </div>
+
+        <div class="umumi">
+            
+        <div class="asagi">
+            <div class="geri" onclick="geri()">
+                <div class="ox"></div>
+                GERI</div>
+            <h1>Umumi ortalama bal</h1>
+            <table class="asagitable">
+                <tr>
+                    <td colspan="2" id="sec1"><label for="semsayi">Semestr sayi:</label></td>
+                        <td colspan="2" id="sec2">
+                            <select id="semsayi" name="semsayi" onchange="deyis2()">                        
+                            <option value="2" selected>2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"> &nbsp;</td>
+                    </tr>
+                    <tr id="sem1">
+                        <td><label for="umbal-1">Ortalama:</label></td>
+                        <td><input type="text" id="umbal-1" name="umbal-1" class="umgiris" maxlength="6"></td>
+                        <td><label for="umkredit-1">Umumi Kredit:</label></td>
+                        <td><input type="text" id="umkredit-1" name="umkredit-1" class="umgiris" maxlength="2"></td>
+                    </tr>
+                    <tr id="sem2">
+                        <td><label for="umbal-2">Ortalama:</label></td>
+                        <td><input type="text" id="umbal-2" name="umbal-2" class="umgiris" maxlength="6"></td>
+                        <td><label for="umkredit-2">Umumi Kredit:</label></td>
+                        <td><input type="text" id="umkredit-2" name="umkredit-2" class="umgiris" maxlength="2"></td>
+                    </tr>
+                    <tr id="sem3">
+                        <td><label for="umbal-3">Ortalama:</label></td>
+                        <td><input type="text" id="umbal-3" name="umbal-3" class="umgiris" maxlength="6"></td>
+                        <td><label for="umkredit-3">Umumi Kredit:</label></td>
+                        <td><input type="text" id="umkredit-3" name="umkredit-3" class="umgiris" maxlength="2"></td>
+                    </tr>
+                    <tr id="sem4">
+                        <td><label for="umbal-4">Ortalama:</label></td>
+                        <td><input type="text" id="umbal-4" name="umbal-4" class="umgiris" maxlength="6"></td>
+                        <td><label for="umkredit-4">Umumi Kredit:</label></td>
+                        <td><input type="text" id="umkredit-4" name="umkredit-4" class="umgiris" maxlength="2"></td>
+                    </tr>
+                    <tr id="sem5">
+                        <td><label for="umbal-5">Ortalama:</label></td>
+                        <td><input type="text" id="umbal-5" name="umbal-5" class="umgiris" maxlength="6"></td>
+                        <td><label for="umkredit-5">Umumi Kredit:</label></td>
+                        <td><input type="text" id="umkredit-5" name="umkredit-5" class="umgiris" maxlength="2"></td>
+                    </tr>
+                    <tr id="sem6">
+                        <td><label for="umbal-6">Ortalama:</label></td>
+                        <td><input type="text" id="umbal-6" name="umbal-6" class="umgiris" maxlength="6"></td>
+                        <td><label for="umkredit-6">Umumi Kredit:</label></td>
+                        <td><input type="text" id="umkredit-6" name="umkredit-6" class="umgiris" maxlength="2"></td>
+                    </tr>
+                    <tr id="sem7">
+                        <td><label for="umbal-7">Ortalama:</label></td>
+                        <td><input type="text" id="umbal-7" name="umbal-7" class="umgiris" maxlength="6"></td>
+                        <td><label for="umkredit-7">Umumi Kredit:</label></td>
+                        <td><input type="text" id="umkredit-7" name="umkredit-7" class="umgiris" maxlength="2"></td>
+                    </tr>
+                    <tr id="sem8">
+                        <td><label for="umbal-8">Ortalama:</label></td>
+                        <td><input type="text" id="umbal-8" name="umbal-8" class="umgiris" maxlength="6"></td>
+                        <td><label for="umkredit-8">Umumi Kredit:</label></td>
+                        <td><input type="text" id="umkredit-8" name="umkredit-8" class="umgiris" maxlength="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"> &nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" id="sec1"> <label for="umcavab">
+                        GPA: &nbsp; <input id="umcavab" name="umcavab"  class="umcavab" disabled  > </td>
+                    <td colspan="2" id="sec2"> <input type="button" value="Hesabla"  class="btn-umhesab" onclick="umhesabla()" ></td>
+                    
+
+                </tr>
+
+            </table>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+
+</html>
